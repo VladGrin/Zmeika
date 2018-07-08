@@ -4,8 +4,8 @@ public class Snake {
     public int direction = 0;
     public int snakeLength = 1;
 
-    public int[] snakePositionX = new int[Launcer.HEIGHT * Launcer.WIDTH];
-    public int[] snakePositionY = new int[Launcer.HEIGHT * Launcer.WIDTH];
+    public int[] snakePositionX = new int[Launcher.HEIGHT * Launcher.WIDTH];
+    public int[] snakePositionY = new int[Launcher.HEIGHT * Launcher.WIDTH];
 
     public Snake(int x, int y) {
         snakePositionX[0] = x;
@@ -34,20 +34,20 @@ public class Snake {
                 snakeLength = i - 2;
             }
         }
-        if (snakePositionX[0] > Launcer.WIDTH) {
+        if (snakePositionX[0] > Launcher.WIDTH) {
             snakePositionX[0] = 0;
             System.out.println("1");
         }
-        if (snakePositionY[0] > Launcer.HEIGHT) {
+        if (snakePositionY[0] > Launcher.HEIGHT) {
             snakePositionY[0] = 0;
             System.out.println("2");
         }
         if (snakePositionX[0] < 0) {
-            snakePositionX[0] = Launcer.HEIGHT;
+            snakePositionX[0] = Launcher.HEIGHT;
             System.out.println("3");
         }
         if (snakePositionY[0] < 0) {
-            snakePositionY[0] = Launcer.WIDTH;
+            snakePositionY[0] = Launcher.WIDTH;
             System.out.println("4");
         }
     }

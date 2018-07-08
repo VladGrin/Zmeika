@@ -10,7 +10,7 @@ public class Fruit {
     }
 
     public void setApplePosition() {
-        applePositionX = (int) (Math.random() * Launcer.WIDTH);
-        applePositionY = (int) (Math.random() * Launcer.HEIGHT);
+        applePositionX = (int) (Math.random() * Launcher.WIDTH);
+        applePositionY = (int) (Math.random() * Launcher.HEIGHT);
     }
 }

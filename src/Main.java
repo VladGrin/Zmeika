@@ -1,9 +1,9 @@
-import game.Launcer;
+import game.Launcher;
 
 public class Main {
 
     public static void main(String[] args) {
-        Launcer launcer = new Launcer();
-        launcer.start();
+        Launcher launcher = new Launcher();
+        launcher.run();
     }
 }

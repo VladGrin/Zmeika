@@ -7,16 +7,16 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
-public class Launcer extends JPanel implements ActionListener {
-    public final int SIZE = 20;
+public class Launcher extends JPanel implements ActionListener {
+    private final int SIZE = 20;
     public static final int WIDTH = 20;
     public static final int HEIGHT = 20;
 
     private Fruit fruit = new Fruit((int) (Math.random() * WIDTH), (int) (Math.random() * HEIGHT));
     private Snake snake = new Snake(0, 10);
-    private Timer timer = new Timer(250, this);
+    private Timer timer = new Timer(150, this);
 
-    public Launcer() {
+    public Launcher() {
         timer.start();
         addKeyListener(new Keyboard());
         setFocusable(true);
@@ -33,13 +33,13 @@ public class Launcer extends JPanel implements ActionListener {
         graphics.fillRect(fruit.applePositionX * SIZE, fruit.applePositionY * SIZE, SIZE, SIZE);
     }
 
-    public void start() {
+    public void run() {
         JFrame jFrame = new JFrame();
         jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         jFrame.setResizable(false);
         jFrame.setSize(WIDTH * SIZE + 16, HEIGHT * SIZE + 38);
         jFrame.setLocationRelativeTo(null);
-        jFrame.add(new Launcer());
+        jFrame.add(new Launcher());
         jFrame.setVisible(true);
     }
 
