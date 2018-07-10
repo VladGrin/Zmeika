@@ -1,4 +1,4 @@
-package game;
+package com.game.zmeika.main;
 
 import javax.swing.*;
 import java.awt.*;

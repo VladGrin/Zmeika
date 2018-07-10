@@ -1,4 +1,4 @@
-package game;
+package com.game.zmeika.main;
 
 public class Fruit {
     public int applePositionX;

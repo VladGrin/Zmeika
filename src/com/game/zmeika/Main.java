@@ -1,4 +1,6 @@
-import game.Launcher;
+package com.game.zmeika;
+
+import com.game.zmeika.main.Launcher;
 
 public class Main {
 
