@@ -2,7 +2,7 @@ package com.game.zmeika.main;
 
 public class Snake {
     public int direction = 0;
-    public int snakeLength = 1;
+    public int snakeLength = 2;
 
     public int[] snakePositionX = new int[Launcher.HEIGHT * Launcher.WIDTH];
     public int[] snakePositionY = new int[Launcher.HEIGHT * Launcher.WIDTH];
@@ -34,11 +34,14 @@ public class Snake {
                 snakeLength = i - 2;
             }
         }
-        if (snakePositionX[0] > Launcher.WIDTH-1) {
+        if (snakeLength < 2) {
+            snakeLength = 2;
+        }
+        if (snakePositionX[0] > Launcher.WIDTH - 1) {
             snakePositionX[0] = 0;
             System.out.println("1");
         }
-        if (snakePositionY[0] > Launcher.HEIGHT-1) {
+        if (snakePositionY[0] > Launcher.HEIGHT - 1) {
             snakePositionY[0] = 0;
             System.out.println("2");
         }

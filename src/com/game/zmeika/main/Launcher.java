@@ -25,7 +25,9 @@ public class Launcher extends JPanel implements ActionListener {
     public void paint(Graphics graphics) {
         graphics.setColor(new Color(0, 100, 255));
         graphics.fillRect(0, 0, WIDTH * SIZE, HEIGHT * SIZE);
-        for (int i = 0; i < snake.snakeLength; i++) {
+        graphics.setColor(new Color(50, 100, 50));
+        graphics.fillRect(snake.snakePositionX[0] * SIZE, snake.snakePositionY[0] * SIZE, SIZE, SIZE);
+        for (int i = 1; i < snake.snakeLength; i++) {
             graphics.setColor(new Color(50, 200, 50));
             graphics.fillRect(snake.snakePositionX[i] * SIZE, snake.snakePositionY[i] * SIZE, SIZE, SIZE);
         }
